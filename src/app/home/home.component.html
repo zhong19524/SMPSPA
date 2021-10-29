@@ -1,0 +1,22 @@
+<div class="rounded">
+
+    <div class="container-fluid bg-light">
+        <div class="row">
+
+            <div *ngFor="let post of posts">
+                <!-- Call child component and pass the moviecard object through the [input ] property -->
+                <div class="card">
+                    <div class = car-header>
+                        {{post.username}}
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{post.title}}</h5>
+                        <p class="card-text">{{post.content}}</p>
+                        <a href="#" class="btn btn-primary">Like</a>
+                </div>
+                    
+            </div>
+        </div>
+    </div>
+
+</div>
