@@ -13,13 +13,13 @@ export class PostService {
   constructor(private http:HttpClient) {}
 
   getAllPosts():Observable<PostCard[]>{
-    return this.http.get(`${environment.apiUrl}`+'GET/posts').pipe(
+    return this.http.get(`${environment.apiUrl}`+'posts').pipe(
       map(resp => resp as PostCard[])
     )
   }
 
   postPost(postCard:PostCard):Observable<boolean>{
-    return this.http.post(`${environment.apiUrl}`+'POST/posts',JSON.stringify(postCard),{responseType:'text'}).pipe(
+    return this.http.post(`${environment.apiUrl}`+'posts',JSON.stringify(postCard),{responseType:'text'}).pipe(
       map((response:any) =>{
         if (response){
           // console.log('postresponse!')
