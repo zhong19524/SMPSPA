@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  apiUrl: 'https://serverless-api.zhongquanbin.workers.dev/'
 };
